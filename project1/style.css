@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    white-space: nowrap;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+#cursor{
+    height: 17vh;
+    width:17vh;
+    background-color: rgba(221, 81, 81, 0.562);
+    border-radius: 50%;
+    transform: translate(-50%,-50%)   scale(0);
+    position: fixed;
+    z-index: 6;
+}
+.page1 {
+    min-height: 100vh;
+  
+    /* border: 2px solid black; */
+    margin-top: 9rem;
+    /* background-color: blue; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+.page1 h1 {
+    font-family: futura;
+    font-size: 9rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1;
+
+}
+
+.video-container {
+    height: 100vh;
+    /* background-color: red; */
+    max-width: 100%;
+    /* position: relative; */
+    margin: 0 3rem;
+}
+
+.video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* padding: 0 3rem; */
+}
+
+.video-container #play {
+    padding: 2.5rem;
+    background-color: black;
+    font-size: 2.3rem;
+    color: aliceblue;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    text-transform: uppercase;
+transform: translate(-50%,-50%) scale(0);
+   
+    opacity: 0;
+
+}
+
+.page2 {
+    padding: 3rem;
+   min-height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+.page2 .elem {
+    height: 100vh;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+   margin-left: 1rem;
+}
+
+.page2 .elem img {
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page2 .elem #elem3{
+    height: 90vh;
+}
+.page2 .elem{
+
+}
+.page2 .elem .dets{
+
+    z-index: 9;
+    background-color:lightcoral;
+    height: 2rem;
+    width: 15vw;
+    position: absolute;
+    border-radius: 30px;
+    /* padding-bottom: 10rem; */
+    text-align: center;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    position: fixed;
+
+    
+}
+.page2 .elem .dets:hover{
+    /* white-space: nowrap; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* overflow: auto; */
+    height: auto;
+transition: 1s;
+/* transition-delay: 0.1s; */
+    padding-bottom: 3rem;
+   
+}
+
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(30, 102, 165); */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  z-index: 9;
+}
+.page3 .child{
+    height: 55vh;
+    /* background-color: red; */
+    width: 40vw;
+    /* border: 3px solid black; */
+    margin-bottom: 2rem;
+  
+
+}
+
+.page3 .child img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: center; */
+}
+
+
+.nav {
+    height: 10%;
+    /* background-color: aquamarine; */
+    position: fixed;
+    width: 100%;
+    /* margin-bottom: 4rem; */
+    margin-top: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    z-index: 6;
+    /* border-bottom:1px solid red ; */
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
+}
+
+.nav .part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+.links{
+    display: flex;
+  
+}
+.links a{
+    text-decoration: none;
+    margin-left: 3rem;
+    font-size: 1rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+
+.icons i{
+    margin-left: 3rem;
+    margin-right: 2rem;
+  font-size: 1rem;
+}
+.svg{
+    animation: change 5s infinite;;
+}
+.svg .scrolled {
+    background-color: #af1212;
+}
+
+@keyframes change{
+    from {top: 0px;}
+  to {top: 200px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 900px) {
+    .page1 h1 {
+        font-size: 13vw;
+        padding-bottom: 0px;
+    }
+
+    .video-container {
+        height: 100%;
+    }
+
+    .video-container video {
+        /* Add your styles for video container here */
+    }
+
+    .page1 {
+        min-height: 70vh;
+        overflow-x: auto;
+    }
+
+    .page1::-webkit-scrollbar {
+        display: none;
+    }
+
+    .page2 {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .page2 .elem {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        /* Add additional styles for .elem here */
+    }
+
+    .video-container #play {
+        padding: .7rem;
+        background-color: black;
+        font-size: 1rem;
+        color: aliceblue;
+        border-radius: 50%;
+    }
+
+    .page2 .elem .dets{
+
+        z-index: 9;
+        background-color:lightcoral;
+        height: 2rem;
+        width: 30vw;
+        position: absolute;
+        border-radius: 30px;
+        /* padding-bottom: 10rem; */
+        text-align: center;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        position: fixed;
+    
+        
+    }
+    .page2 .elem .dets:hover{
+        /* white-space: nowrap; */
+        overflow-x: auto;
+        overflow-y: hidden;
+        /* overflow: auto; */
+        height: auto;
+    transition: 1s;
+    /* transition-delay: 0.1s; */
+        padding-bottom: 3rem;
+       
+    }
+}
+
+
